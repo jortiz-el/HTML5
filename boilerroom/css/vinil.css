@@ -1,0 +1,30 @@
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+
+}
+
+.gris {
+	background-color: #b2b1b1 ;
+	color: white;
+}
+.gris-oscuro {
+	background-color: #9f9d9e ;
+	color: white;
+}
+.cyan {
+	background-color: #1dcfd1;
+	color: white;
+}
+.boton {
+	border-radius: 4px;
+	border:none;
+	height: 1.5em;
+	-webkit-box-shadow: -2px 5px 10px #888888;
+	-moz-box-shadow: -2px 5px 10px #888888;
+	box-shadow: -2px 5px 10px #888888;
+
+} 
