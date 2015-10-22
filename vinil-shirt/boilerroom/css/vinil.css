@@ -6,13 +6,10 @@
 
 
 }
-*{
-	font-family: tahoma ;
-}
 
 .gris {
 	background-color: #b2b1b1 ;
-	color: white;
+	color: white; 
 }
 .gris-oscuro {
 	background-color: #9f9d9e ;
@@ -29,5 +26,19 @@
 	-webkit-box-shadow: -2px 3px 10px #888888;
 	-moz-box-shadow: -2px 3px 10px #888888;
 	box-shadow: -2px 3px 10px #888888;
-
+}
+div#container {
+	max-width: 960px;
+	margin: auto; 
 } 
+header {
+
+}
+img#geolo {
+	background-repeat: none;
+	width: 1em;
+	height: 1.5em;
+}
+figure {
+	padding: 0.5em;
+}
