@@ -41,30 +41,31 @@ a.white {
 	font-size: 0.9em;
 }
 
-div#container {
-	position: relative;
+#container {
 	max-width: 960px;
 	margin: auto; 
 } 
 
-ul#geolo li {
+#geolo  {
 	text-align: right;
+	height: 2.1em;
 	padding: 0.2em;
 	padding-right: 1em;
 }
-section#logo {
+#logo {
+	
 	width: 10em;
 	height: 17em;
-	float: left;
 	margin-left: 3em;
-	position: relative;
-	top: -3em;
-	-webkit-box-shadow: 0px 1px 18px #888888; 
-	   -moz-box-shadow: 0px 1px 18px #888888;
-	        box-shadow: 0px 1px 18px #888888;
+	position: absolute;
+	top: 0em;
+	-webkit-box-shadow: 0px -8px 18px #888888; 
+	   -moz-box-shadow: 0px -8px 18px #888888;
+	        box-shadow: 0px -8px 18px #888888;
 }
-section#producto {
+#producto , #navegacion {
 	margin-left: 13em;
 	background-color: grey;
 }
+
 
