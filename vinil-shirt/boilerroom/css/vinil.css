@@ -28,9 +28,16 @@
 	   -moz-box-shadow: -2px 3px 10px #888888;
 	        box-shadow: -2px 3px 10px #888888;
 }
+input[type='text'], input[type='search']  {
+	border: 0.1em solid;
+	border-radius: 0.3em;
+	height: 1.8em;
+}
 .clear {
 	clear: both;
 }
+
+
 img.middle {
 	vertical-align: middle;
 }
@@ -55,7 +62,7 @@ a.white {
 #logo {
 	
 	width: 10em;
-	height: 17em;
+	height: 13.1em;
 	margin-left: 3em;
 	position: absolute;
 	top: 0em;
@@ -65,7 +72,56 @@ a.white {
 }
 #producto , #navegacion {
 	margin-left: 13em;
-	background-color: grey;
+	height: 5.5em;
 }
+
+#producto form {
+	float: left;
+	margin: 1em;
+	margin-top: 2em;
+	margin-left: 8em;
+}
+#usuario_carrito {
+	float: right;
+	margin: 1em;
+	margin-top: 2em;
+}
+
+#cuenta_carro {
+	width: 2em;
+}
+
+#navegacion ul li {
+	display: inline-block;
+	width: 4em;
+	margin-left: 3.5em;
+	margin-top: 1em;
+	font-size: 1.2em
+}
+#navegacion ul li a {
+	text-decoration: none;
+	color: #9f9d9e;
+}
+#boletin {
+	height: 3em;
+}
+#boletin  nav {
+	float: left;
+	padding: 1em;
+}
+#boletin  nav a {
+	font-size: 0.8em;
+	text-decoration: none;
+	color: white ;
+	margin-right: 2em;
+}
+#boletin  form {
+	padding: 1em;
+}
+
+
+
+
+
 
 

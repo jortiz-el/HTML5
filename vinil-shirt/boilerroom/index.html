@@ -21,7 +21,7 @@
 				<a href="#" class ="white"><img class="middle" src="imagenes/geolo.png" alt="img geolocalizacion"/>Encuentra tu tienda mas cercana</a>
 				</p>
 			</section>
-			<section id="logo">
+			<section id="logo" class="cyan">
 				<figure class="cyan" >
 					<img src="#" alt="logo">
 					<figcaption>VinilShrit</figcaption>
@@ -29,20 +29,16 @@
 			</section>
 			<section id="producto">
 				<form action="#" method="post">
-					<input type="text" value="Encuentra productos, diseños" />
-					<figure>
-						<img src="#" alt="lupa">
-					</figure>
-					<input type="submit" class="cyan boton">
+					<input type="search" value="Encuentra productos, diseños" />
+					<input type="submit" class="cyan boton" value="Enviar">
 				</form>
-				<section>
-					<figure >usuario</figure>
-					<figure >carrito</figure>
-					<figure >0</figure>
+				<section id="usuario_carrito">
+					<button class="boton">usuario</button>
+					<button class="boton">carrito</button>
+					<input type="text" id="cuenta_carro" value="0"/>
 				</section>
 			</section>
 			<nav  id="navegacion">
-				<h3>Nav</h3>
 				<ul>
 					<li><a href="#">Inicio</a></li>
 					<li><a href="#">Diseños</a></li>
@@ -50,12 +46,10 @@
 					<li><a href="#">Contacto</a></li>
 				</ul>
 			</nav>
-			<section class="gris clear" >
+			<section class="gris clear" id="boletin" >
 				<nav>
-					<ul>
-						<li><a href="#">vinildhirt@vinilshirt.com</a></li>
-						<li><a href="#">91 661 90 04</a></li>
-					</ul>	
+					<a href="#">vinildhirt@vinilshirt.com</a>
+					<a href="#">91 661 90 04</a>
 				</nav>
 				<form action="#" method="post">
 					<label >Boletín</label>
