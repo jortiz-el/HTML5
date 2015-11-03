@@ -33,9 +33,6 @@ input[type='text'], input[type='search']  {
 	border-radius: 0.3em;
 	height: 1.8em;
 }
-.clear {
-	clear: both;
-}
 
 
 img.middle {
@@ -52,16 +49,15 @@ a.white {
 	max-width: 960px;
 	margin: auto; 
 } 
-
+/*----------logo-----------*/
 #geolo  {
 	text-align: right;
-	height: 2.1em;
+	height: 1.8em;
 	padding: 0.2em;
 	padding-right: 1em;
 }
 #logo {
-	
-	width: 10em;
+	width: 9em;
 	height: 13.1em;
 	margin-left: 3em;
 	position: absolute;
@@ -70,9 +66,14 @@ a.white {
 	   -moz-box-shadow: 0px -8px 18px #888888;
 	        box-shadow: 0px -8px 18px #888888;
 }
+#logo figure img {
+	height: 13em;
+	padding-left: 0.5em;
+}
+/*--------carrito-producto-------------*/
 #producto , #navegacion {
 	margin-left: 13em;
-	height: 5.5em;
+	height: 5.7em;
 }
 
 #producto form {
@@ -90,7 +91,7 @@ a.white {
 #cuenta_carro {
 	width: 2em;
 }
-
+/*--------navegacion---------*/
 #navegacion ul li {
 	display: inline-block;
 	width: 4em;
@@ -102,6 +103,7 @@ a.white {
 	text-decoration: none;
 	color: #9f9d9e;
 }
+/*-------boletin----------*/
 #boletin {
 	height: 3em;
 }
@@ -118,9 +120,32 @@ a.white {
 #boletin  form {
 	padding: 1em;
 }
+/*-----------body---------------*/
+#bannerCamiseta {
+	background-image: url(../imagenes/banner_camiseta.png);
+	height: 27em;
+}
+header h5 {
+	font-size: 3em;
+	color: white;
+	-webkit-text-shadow: -4px 5px 7px #000000; 
+       -moz-text-shadow: -4px 5px 7px #000000;
+            text-shadow: -4px 5px 7px #000000;
+}
+#botonCamiseta {
+	float: right;
+	margin-top: 12.5em;
+	margin-right: 6em;
+	width: 15em;
+	height: 2.3em;
+	font-size: 1.4em;
+	
+}
 
-
-
+#bannerEnvio {
+	background-image: url(../imagenes/banner_envio.png);
+	height: 22.5em;
+}
 
 
 
