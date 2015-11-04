@@ -10,8 +10,6 @@
 	<link rel="stylesheet" href="css/vinil.css">
 	<link rel="stylesheet/less" type="text/css" href="less/vinil.less" />
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-	
-
 </head>
 <body>
 	<div id="container">
@@ -32,8 +30,8 @@
 					<input type="submit" class="cyan boton" value="Enviar">
 				</form>
 				<section id="usuario_carrito">
-					<button class="boton">usuario</button>
-					<button class="boton">carrito</button>
+					<figure id="usuario"></figure>
+					<figure id="carrito"></figure>
 					<input type="text" id="cuenta_carro" value="0"/>
 				</section>
 			</section>
@@ -47,13 +45,17 @@
 			</nav>
 			<section class="gris clear" id="boletin" >
 				<nav>
+					<figure id="correo"></figure>
 					<a href="#">vinildhirt@vinilshirt.com</a>
+					<figure id="telefono"></figure>
 					<a href="#">91 661 90 04</a>
 				</nav>
 				<form action="#" method="post">
 					<label >Boletín</label>
+				<div>
 					<label >Reciba un 10% de descuento por suscribirse</label>
-					<input type="text" value="Email*" />
+					<input class="gris" type="text" value="Email*" />
+				</div>
 					<input  type="submit" class="cyan boton" value="Enviar">
 				</form>
 				
@@ -76,28 +78,28 @@
 					<article id="masbuscados">
 						
 						<ul>
-							<li>
+							<li id="musica">
 								<a href="#">Música</a>
 							</li>
-							<li>
+							<li id="deportes">
 								<a href="#">Deportes</a>
 							</li>
-							<li>
+							<li id="freak">
 								<a href="#">Freak</a>
 							</li>
-							<li>
+							<li id="video">
 								<a href="#">Video Juegos</a>
 							</li>
-							<li>
+							<li id="humor">
 								<a href="#">Humor</a>
 							</li>
-							<li>
+							<li id="series">
 								<a href="#">Series</a>
 							</li>
-							<li>
+							<li id="retro">
 								<a href="#">Retro</a>
 							</li>
-							<li>
+							<li id="peliculas">
 								<a href="#">Peliculas</a>
 							</li>
 						</ul>
@@ -110,7 +112,7 @@
 				<article>
 					<p>El envío de realizará por correo
 					totalmente <span>gratis*</span> </p>
-					<p><br>a partir de <span>2</span> unidades!</p>
+					<p><br>a partir de <span class="dos">2</span> unidades!!</p>
 				</article>
 				<form action="#" method="post">
 					<input type="submit" id="botonenvio" class="cyan boton botongrande" value="Metodos de Envio">
@@ -118,33 +120,39 @@
 			</section>
 		</section>
 		<footer>
-			<section class="gris-oscuro">
+			<section id="satisfaccion" class="gris-oscuro">
 				<article>
-					<figure>satisfacción</figure>
+					<a href="#">
+					<figure id="satis"></figure>
 					<h5>satisfacción 100%</h5>
 					<p>calidad asegurada!<br>
 					   devoluciones sin problemas
 					</p>
+					</a>
 				</article>
 				<article>
-					<figure>ambiente</figure>
+					<a href="#">
+					<figure id="ambiente"></figure>
 					<h5>Medio ambiente</h5>
 					<p>reciclamos cajas<br>
 					   cuidamos el medio hambiente
 					</p>
+					</a>
 				</article>
 				<article>
-					<figure>seguridad</figure>
+					<a href="#">
+					<figure id="seguridad"></figure>
 					<h5>Seguridad online</h5>
 					<p>compra con seguridad<br>
 					   confianza online asegurada
 					</p>
+					</a>
 				</article>
 			</section>
-			<section class="gris">
+			<section id="pie" class="gris">
 				<section>
 					<article>
-						<h2>quizas te interese</h2>
+						<h2 class="tituo_pie">quizas te interese</h2>
 						<ul>
 							<li><a href="#">+ Quienes somos?</a></li>
 							<li><a href="#">+ Producción de vinilo</a></li>
@@ -152,41 +160,46 @@
 							<li><a href="#">+ Precios gran tirada</a></li>
 							<li><a href="#">+ Devoluciones</a></li>
 							<li><a href="#">+ Aviso legal</a></li>
-							<li><a href="#">+ Quienes somos</a></li>
+							<li><a href="#">+ Privacidad</a></li>
 						</ul>
 					</article>
-					<figure>
-						<img src="#" alt="vinil">Vinil shirt + mapa mundi
-					</figure>
 					<article>
-						<h2>Sobre Vinil Shirt</h2>
-						<p>¿Te apasionan las camisetas? Crea, Compra y vende camisetas y 
-							muchos mas productos de calidad con lo que te gusta de verdad.
-							 Con vinil hirt, alimenta tu pasión.
-						</p>
-						<p>Producido y enviado desde Madrid , Mas de 100.000 clientes ya nos
+						<figure id="mapa"></figure>
+					</article>
+					<article>
+						<h2 class="tituo_pie">Sobre Vinil Shirt</h2>
+						<p>
+							¿Te apasionan las camisetas? 
+							Crea, Compra y vende camisetas y 
+							muchos mas productos de calidad 
+							con lo que te gusta de verdad.
+							Con vinil hirt, alimenta tu pasión.
+						</p><br>
+						<p>
+							Producido y enviado desde Madrid
+							Mas de 100.000 clientes ya nos
 							han dado su confianza.
 						</p>
 					</article>
 				</section>
 				<section>
 					<div>
-						<figure>
-							<img src="#" alt="pay pal">Pay pal
-						</figure>
+						<figure id="paypal"></figure>
+					</div>	
+					<div>
+						<figure class="redes" id="face"></figure>
+						<figure class="redes" id="twiter"></figure>
+						<figure class="redes" id="google"></figure>
+						<figure class="redes" id="linkedin"></figure>
+						<figure class="redes" id="insta"></figure>
+						<figure class="redes" id="rss"></figure>
+						<figure class="redes" id="youtube"></figure>
 					</div>
 					<div>
-						<figure>
-							<img src="#" alt="redes sociales">redes sociales
-						</figure>
-					</div>
-					<div>
-						<figure>
-							<img src="#" alt="confianza <online></online>">confianza en linea
-						</figure>
+						<figure id="confianza"></figure>
 					</div>
 				</section>
-				<p>Copyrigh©2015 - <a href="#">Contacta con el web 
+				<p>Copyrigh©2015 - <a  href="#">Contacta con el web 
 						master</a> - calle de francisco chico mendes, 4, 28108 Alcobendas 
 						, Madrid 916 61 90 04
 				</p>
