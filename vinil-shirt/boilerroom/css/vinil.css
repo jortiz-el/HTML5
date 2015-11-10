@@ -161,6 +161,7 @@ input[type="search"] + input {
 }
 li.nivel1 > a {
 	color: #9f9d9e;
+	text-align: right;
 }
 li.nivel1 > a::after {
 	content: "";
@@ -169,6 +170,7 @@ li.nivel1 > a::after {
 	height: 1.7em;
 	float: right;
 	margin-top: -0.2em;
+	margin-left: 1em;
 	transition: all .3s;
 }
 li.nivel1 > a:focus:after {

@@ -1,0 +1,21 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+User-agent: *
+
+Disallow: 
+
+Allow: *
+
+#decimos al robot que espere 30 seg entre cada acceso para qu no saturen el servidor a peticiones
+Crawl-delay: 30
+
+#crawler de google - no indexa archivos terminados en .js y direcciones que empiecen por 2010
+User-agent: Googlebot
+
+Disallow: /*.js$
+
+Disallow: /2010/*
