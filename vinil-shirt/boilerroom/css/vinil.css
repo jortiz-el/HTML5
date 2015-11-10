@@ -31,7 +31,7 @@
 	   -moz-box-shadow: -2px 3px 10px #888888;
 	        box-shadow: -2px 3px 10px #888888;
 }
-input[type='text'], input[type='search']  {
+input[type='text'], input[type='search'], input[type='email'] {
 	border-radius: 0.3em;
 	height: 1.8em;
 }
@@ -84,6 +84,25 @@ a.white {
 	margin-top: 2em;
 	margin-left: 8em;
 }
+input[type="search"] {
+	width: 17em;
+	height: 2.4em;
+	border: 1px solid #9f9d9e;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: none;
+	color: rgba(0, 0, 0, .4);
+}
+input[type="search"] + input {
+	width: 2.6em;
+	height: 2.4em;
+	border: 1px solid #9f9d9e;
+	border-bottom-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+	border-left: none;
+	margin-left: -5px;
+	background: url(../imagenes/lupa.png);
+}
 #usuario_carrito {
 	float: right;
 	margin: 1em;
@@ -95,6 +114,7 @@ a.white {
 	height: 3.5em;
 	display: inline-block;
 	vertical-align: middle;
+	cursor: pointer;
 }
 #carrito {
 	background-image: url(../imagenes/carrito.png);
@@ -102,24 +122,83 @@ a.white {
 	height: 3.5em;
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: -0.4em;
+	cursor: pointer;
 }
-
+#triangulo {
+	width: 0;
+	height: 0;
+	background: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	border: 10px solid #1dcfd1;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	margin-right: -0.4em;
+}
 #cuenta_carro {
 	width: 2.5em;
 	height: 2.5em;
+	border: none;
+	background: #1dcfd1;
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
 }
 /*--------navegacion---------*/
-#navegacion ul li {
-	display: inline-block;
-	width: 4em;
-	margin-left: 3.5em;
+ li.nivel1 {
+	float: left;
+	width: 8em;
+	line-height: 1.6em;
+	margin-left: 1em;
 	margin-top: 1em;
-	font-size: 1.2em
+	font-size: 1.2em;
 }
-#navegacion ul li a {
+#navegacion a {
 	text-decoration: none;
+	display: block;
+}
+li.nivel1 > a {
 	color: #9f9d9e;
 }
+li.nivel1 > a::after {
+	content: "";
+	background: url(../imagenes/flecha.png) no-repeat;
+	width: 1.7em;
+	height: 1.7em;
+	float: right;
+	margin-top: -0.2em;
+	transition: all .3s;
+}
+li.nivel1 > a:focus:after {
+	transform: rotate(90deg);	
+}
+ul ul {
+	min-width: 9em;
+	line-height: 1.9em;
+	position: absolute;
+}
+ul ul li {
+	max-height: 0;
+	overflow: hidden;
+	transition: all .6s;
+	background: #9f9d9e;
+	border: 1px solid white;
+	border-top: none;
+}
+li.nivel1 > a:focus + ul li {
+	max-height: 10em;
+	overflow: visible;
+}
+ul ul li:hover {
+	background: #1dcfd1;
+}
+ul ul a {
+	color: white;
+	text-align: center;
+}
+
 /*-------boletin----------*/
 #boletin {
 	height: 3.7em;
@@ -167,8 +246,10 @@ form div input {
 	height: 27em;
 }
 header h5 {
-	font-size: 3em;
+	font-size: 3.4em;
 	color: white;
+	text-align: right;
+	padding-right: 1em;
 	-webkit-text-shadow: -4px 5px 7px #000000; 
        -moz-text-shadow: -4px 5px 7px #000000;
             text-shadow: -4px 5px 7px #000000;
@@ -371,6 +452,7 @@ figure.redes {
 	height: 2.7em;
 	display: inline-block;
 	margin: em;
+	cursor: pointer;
 }
 
 #face {
@@ -423,7 +505,8 @@ figure.redes {
 	background-image: url(../imagenes/redes2.png);
 }
 figure#confianza {
-	background-image: url(../imagenes/confianza.png);
+	background-image: url(../imagenes/selloanimado.gif);
+	background-repeat: no-repeat;
 	width: 4.3em;
 	height: 4.3em;
 }

@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/vinil.css">
 	<link rel="stylesheet/less" type="text/css" href="less/vinil.less" />
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+	<script src="js/eventos.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -26,21 +27,44 @@
 			</section>
 			<section id="producto">
 				<form action="#" method="post">
-					<input type="search" value="Encuentra productos, diseños" />
-					<input type="submit" class="cyan boton" value="Enviar">
+					<input type="search" id="search" onfocus="limpiar()" value="Encuentra productos, diseños..." />
+					<input type="submit" name="submit" value=""/>
 				</form>
 				<section id="usuario_carrito">
 					<figure id="usuario"></figure>
 					<figure id="carrito"></figure>
-					<input type="text" id="cuenta_carro" value="0"/>
+					<figure id="triangulo"></figure>
+					<input type="text" clas="cyan" id="cuenta_carro" value="0" readonly="readonly"/>
 				</section>
 			</section>
 			<nav  id="navegacion">
 				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Diseños</a></li>
-					<li><a href="#">Productos</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li class="nivel1"><a href="#">Inicio</a></li>
+					<li class="nivel1"><a href="#">Diseños</a>
+						<ul>
+							<li><a href="#">Música</a></li>
+							<li><a href="#">Deportes</a></li>
+							<li><a href="#">Freak</a></li>
+							<li><a href="#">Video Juegos</a></li>
+							<li><a href="#">Humor</a></li>
+							<li><a href="#">Series</a></li>
+							<li><a href="#">Retro</a></li>
+							<li><a href="#">Peliculas</a></li>
+						</ul> 
+					</li>
+					<li class="nivel1"><a href="#">Productos</a>
+						<ul>
+							<li><a href="#">Camiseta</a></li>
+							<li><a href="#">Camiseta chica</a></li>
+							<li><a href="#">Camiseta corta</a></li>
+							<li><a href="#">musculosa</a></li>
+							<li><a href="#">Gorra plana</a></li>
+							<li><a href="#">Gorra trucker</a></li>
+							<li><a href="#">sudaderas</a></li>
+							<li><a href="#">Tazas</a></li>
+						</ul> 
+					</li>
+					<li class="nivel1"><a href="#">Contacto</a></li>
 				</ul>
 			</nav>
 			<section class="gris clear" id="boletin" >
@@ -54,7 +78,7 @@
 					<label >Boletín</label>
 				<div>
 					<label >Reciba un 10% de descuento por suscribirse</label>
-					<input class="gris" type="text" value="Email*" />
+					<input class="gris" type="email" onfocus="if(this.value !== '') { this.value = ''; }" value="Email*" />
 				</div>
 					<input  type="submit" class="cyan boton" value="Enviar">
 				</form>
