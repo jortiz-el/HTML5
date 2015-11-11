@@ -453,7 +453,7 @@ figure.redes {
 	width: 2.6em;
 	height: 2.7em;
 	display: inline-block;
-	margin: em;
+	margin: 0em;
 	cursor: pointer;
 }
 
@@ -512,11 +512,22 @@ figure#confianza {
 	width: 4.3em;
 	height: 4.3em;
 }
-#pie >p {
-	text-align: center;
-	padding-bottom: 0.5em;
+.confianza {
+	width: 12em;
 }
-
+#licencia {
+	height: 1em;
+	margin-top: -1.7em;
+}
+#licencia span, #licencia a {
+	text-align: center;
+	font-size: 1em;
+}
+#confianza + a {
+	float: right;
+	position: relative;
+	top: -3em;
+}
 
 
 
