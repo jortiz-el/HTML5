@@ -1,0 +1,198 @@
+@font-fa : tahoma;
+@gris : #b2b1b1;
+@gris-oscuro : #9f9d9e;
+@cyan : #1dcfd1;
+@cyan-oscuro : #16a5a7;
+
+* {
+	font-family: @font-fa;
+}
+.shadow {
+	-webkit-box-shadow: -2px 3px 10px #888888;
+	   -moz-box-shadow: -2px 3px 10px #888888;
+	        box-shadow: -2px 3px 10px #888888;
+}
+
+.gris {
+	background-color: @gris;
+	color: white; 
+}
+.gris-oscuro {
+	background-color: @gris-oscuro;
+	color: white;
+}
+.cyan {
+	background: -webkit-linear-gradient(@cyan, @cyan-oscuro);
+	background: -moz-linear-gradient(@cyan, @cyan-oscuro);
+	background: linear-gradient(@cyan, @cyan-oscuro);
+	color: white;
+}
+.boton {
+	border-radius: 0.5em;
+	border:none;
+	height: 1.8em;
+	width: 6em;
+	/*box-shadow : laterales,abajo,expandir,color*/
+	.shadow;
+}
+input {
+	&[type='text'], &[type='search'], &[type='email'] {
+		border-radius: 0.3em;
+		height: 1.8em;
+	}
+}
+
+
+img {
+	.middle {
+		vertical-align: middle;
+	}
+}
+a {
+	.white {
+		color: white;
+		text-decoration: none;
+		font-family: tahoma;
+		font-size: 0.9em;
+	}
+	
+}
+
+#container {
+	max-width: 960px;
+	margin: auto; 
+} 
+/*--------carrito-producto-------------*/
+#producto , #navegacion {
+	margin-left: 13em;
+	height: 5.7em;
+}
+
+#producto form {
+	float: left;
+	margin: 1em;
+	margin-top: 2em;
+	margin-left: 8em;
+}
+input[type="search"] {
+	width: 17em;
+	height: 2.4em;
+	border: 1px solid @gris-oscuro;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: none;
+	color: rgba(0, 0, 0, .4);
+	& + input {
+		width: 2.6em;
+		height: 2.4em;
+		border: 1px solid @gris-oscuro;
+		border-bottom-right-radius: 0.3em;
+		border-top-right-radius: 0.3em;
+		border-left: none;
+		margin-left: -5px;
+		background: url(../imagenes/lupa.png);
+	}
+}
+#usuario_carrito {
+	float: right;
+	margin: 1em;
+	margin-top: 1em;
+}
+#usuario {
+	background-image: url(../imagenes/usuario.png);
+	width: 4em;
+	height: 3.5em;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#carrito {
+	background-image: url(../imagenes/carrito.png);
+	width: 4em;
+	height: 3.5em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -0.4em;
+	cursor: pointer;
+}
+#triangulo {
+	width: 0;
+	height: 0;
+	background: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	border: 10px solid #1dcfd1;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	margin-right: -0.4em;
+}
+#cuenta_carro {
+	width: 2.5em;
+	height: 2.5em;
+	border: none;
+	background: #1dcfd1;
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
+}
+/*--------navegacion---------*/
+#navegacion a {
+	text-decoration: none;
+	display: block;
+}
+ li {
+ 	.nivel1 {
+		float: left;
+		width: 8em;
+		line-height: 1.6em;
+		margin-left: 1em;
+		margin-top: 1em;
+		font-size: 1.2em;
+		& > a {
+			color: @gris-oscuro;
+			text-align: right;
+				&::after {
+					content: "";
+					background: url(../imagenes/flecha.png) no-repeat;
+					width: 1.7em;
+					height: 1.7em;
+					float: right;
+					margin-top: -0.2em;
+					margin-left: 1em;
+					transition: all .3s;
+				&:focus:after {
+					transform: rotate(90deg);	
+				}
+				&:focus + ul li {
+					max-height: 10em;
+					overflow: visible;
+				}
+			}
+		}
+		
+	}
+	
+ }
+ul {
+	ul {
+		min-width: 9em;
+		line-height: 1.9em;
+		position: absolute;
+		li {
+			max-height: 0;
+			overflow: hidden;
+			transition: all .6s;
+			background: @gris-oscuro;
+			border: 1px solid white;
+			border-top: none;
+			&:hover {
+				background: #1dcfd1;
+			}
+		}
+		a {
+			color: white;
+			text-align: center;
+		}
+	}
+}
