@@ -16,3 +16,18 @@ User-agent: Googlebot
 Disallow: /*.js$
 
 Disallow: /2010/*
+
+# Crawler de Bing
+
+User-agent: bingbot
+
+Disallow: /links.html
+
+Disallow: /private/
+
+Disallow: /photos/
+
+
+#sitemap con fichero a todos los enlaces de la pagina
+
+Sitemap: http://www.vinil-shirt.com/sitemap.xml
