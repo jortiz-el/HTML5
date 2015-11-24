@@ -1,0 +1,24 @@
+h1 {
+	font-size: 2em;
+}
+
+#anima {
+	width: 200px;
+	height: 200px;
+	background-color: orange;
+	-webkit-animation: cambiocolor 7s;
+	animation: cambiocolor 7s infinite;
+}
+
+@-webkit-keyframes cambiocolor {
+	0%{background-color: yellow;}
+	50%{background-color: red;}
+	100%{background-color: blue;}
+}
+
+@keyframes cambiocolor {
+	0%{ border-radius: 0px; background-color: yellow; width: 200px; transform: scale(0.2,0.2);}
+	50%{ border-radius: 25%; background-color: red; width: 400px; height: 400px; }
+	100%{ border-radius: 50%; background-color: blue; width: 400px; height: 400px;perspective(2)}
+}
+
