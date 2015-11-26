@@ -60,9 +60,10 @@ a.white {
 }
 #logo {
 	width: 9em;
-	height: 13.1em;
+	height: 13.2em;
 	margin-left: 3em;
 	position: absolute;
+	overflow: hidden;
 	top: 0em;
 	-webkit-box-shadow: 0px -8px 18px #888888; 
 	   -moz-box-shadow: 0px -8px 18px #888888;
@@ -71,6 +72,12 @@ a.white {
 #logo figure img {
 	height: 13em;
 	padding-left: 0.5em;
+	animation: logo  7s infinite;
+}
+@keyframes logo {
+	0% {transform: translate(0px,200px);}
+	50% {transform: translate(0px,0px);}
+	100% {transform: translate(0px,0px);}
 }
 /*--------carrito-producto-------------*/
 #producto , #navegacion {
