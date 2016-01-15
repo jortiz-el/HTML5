@@ -43,7 +43,7 @@ $(function(){ //shorcut of $(document).ready(function(){})
 		width: '100%'
 	});
 	$('.seclist :first').css({
-		width: '92%'
+		width: '74%'
 	});
 	$('.photo').eq(0).css({
 		width: '100%',
