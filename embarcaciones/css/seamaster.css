@@ -71,6 +71,21 @@
 .visible {
 	display:none;
 }
+.curtain {
+	display: block;
+	width: 283px;
+	height: 283px;
+	margin-top: 0px;
+	position: absolute;
+	background-color: lightgray;
+	padding: 30px;
+	opacity: 0;
+	z-index: 99;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 .title {
 	color: #FFFFFF;
 	text-align: center;

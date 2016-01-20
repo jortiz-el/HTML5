@@ -10,7 +10,7 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	$("article").addClass('miniature shadow');
 	$("img").addClass('photo');
 	$("h1").addClass('title');
-	$("h2").addClass('visible');
+	$("h2").addClass('curtain');
 	$("figcaption").addClass('visible');
 	$("figure").addClass('photo_container');
 	$("video").addClass('video');
@@ -48,6 +48,30 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	$('.photolist :first').css({
 		width: '100%'
 	});
+
+
+	$('.curtain:first').css('width', '670px');
+	$('.curtain').hover(function() {
+		$(this).animate({
+			opacity: "0.7"
+			}, 500);
+		var name = $(this).siblings('figure').children('figcaption').text(),
+			data_price = $(this).parent("article").data('price'),
+			full_name = name + "<br>" + data_price + "€";
+		$(this).html(full_name);
+	}, function() {
+		$(this).animate({
+			opacity: "0"
+			}, 500);
+		$(this).html("");
+	});
+	/*
+	$(".curtain").on('click', function(event) {
+		event.preventDefault();
+		$("this").parent(".miniature").css('borderColor', '#1D4F73');
+	});
+*/
+
 	$('.seclist :first').css({
 		width: '74%'
 	});
@@ -72,13 +96,18 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	$(".footerlist ul").remove();
 	$(".footerlist").append($("<dl>").append($('<dt>', {
 		text: "Who are we?"}),$("<dd>",{
-		text: "some text here"	
+		text: "The quality of our people is the cornerstone of our ability to serve our clients. For this reason, we invest tremendous resources in identifying exceptional people, developing their skills, and creating an environment that fosters their growth as leaders."	
 	}),$('<dt>', {
 		text: "Offices"}),$("<dd>",{
-		text: "some text here"	
+		text: "Austria Klagenfurt Lakeside B06 A-9020 Klagenfurt Austria Phone: +43 463 50645 0 Fax: +43 463 50677 // "	+
+		"Belgium Diegem Pegasuslaan 5 1831 Diegem Belgium Phone: +32 2 709 2000 // " + 
+		"Czech Republic Prague Na Poříčí 1040/10 110 00 Prague 1 Czech Republic Phone: +420 221 899 141/142 Fax: +420 221 899 106"
 	}),$('<dt>', {
 		text: "Terms and conditions"}),$("<dd>",{
-		text: "some text here"	
+		text: "We control the copyright in this template, and you may only use this template in accordance with the licensing provisions in our terms and conditions. Those licensing provisions include an obligation to retain the SEQ Legal credit incorporated into the template."	
+	}),$('<dt>', {
+		text: "Web Developer"}),$("<dd>",{
+		text: "Joao Ortiz Alegre - ojoao_funkyman@hotmail.com - 669 00 01 02 - Madrid Spain"	
 	})));
 
 	$("dt").css({
@@ -111,15 +140,17 @@ $(function(){ //shorcut of $(document).ready(function(){})
 			width: '150px',
 			borderColor: '#1D4F73'
 		});
+		event.preventDefault();
 	});
 	$(".text_inp").focusout(function(event) {
 		$(this).css({
 			width: '20px',
 			borderColor: '#343C45'
 		});
+		event.preventDefault();
 	});
 	$(".text_inp").on('input', function(event) {
-		var text = $(this).val();
+		var text = $(this).val().trim();
 		if (!isNaN(text) && text !== '') {
 			$(".budget span").remove();
 			$(".budget").append('<span class="price">Initial Price: ' + (text*12345) + ' €</span>')
