@@ -6,6 +6,7 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	$('section').addClass('clearfix');
 	$('section ul').addClass('photolist');
 	$('footer').addClass('footerlist');
+	$('dd span').addClass('microdata');
 	$("section li").addClass('seclist');
 	$("article").addClass('miniature shadow');
 	$("img").addClass('photo');
@@ -43,7 +44,7 @@ $(function(){ //shorcut of $(document).ready(function(){})
 		});
 		event.preventDefault();
 	});
-	$(".list").eq(0).css('height', '220px');
+	$(".list:first").css('height', '220px');
 
 	$('.photolist :first').css({
 		width: '100%'
@@ -96,19 +97,26 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	$(".footerlist ul").remove();
 	$(".footerlist").append($("<dl>").append($('<dt>', {
 		text: "Who are we?"}),$("<dd>",{
-		text: "The quality of our people is the cornerstone of our ability to serve our clients. For this reason, we invest tremendous resources in identifying exceptional people, developing their skills, and creating an environment that fosters their growth as leaders."	
+		text: "The quality of our people is the cornerstone of our ability to " +
+		"serve our clients. For this reason, we invest tremendous resources in" +
+		" identifying exceptional people, developing their skills, and creating" +
+		" an environment that fosters their growth as leaders."	
 	}),$('<dt>', {
 		text: "Offices"}),$("<dd>",{
-		text: "Austria Klagenfurt Lakeside B06 A-9020 Klagenfurt Austria Phone: +43 463 50645 0 Fax: +43 463 50677 // "	+
+		text: "Austria Klagenfurt Lakeside B06 A-9020 Klagenfurt Austria Phone:" + 
+		" +43 463 50645 0 Fax: +43 463 50677 // "	+
 		"Belgium Diegem Pegasuslaan 5 1831 Diegem Belgium Phone: +32 2 709 2000 // " + 
-		"Czech Republic Prague Na Poříčí 1040/10 110 00 Prague 1 Czech Republic Phone: +420 221 899 141/142 Fax: +420 221 899 106"
+		"Czech Republic Prague Na Poříčí 1040/10 110 00 Prague 1 Czech Republic" + 
+		" Phone: +420 221 899 141/142 Fax: +420 221 899 106"
 	}),$('<dt>', {
 		text: "Terms and conditions"}),$("<dd>",{
-		text: "We control the copyright in this template, and you may only use this template in accordance with the licensing provisions in our terms and conditions. Those licensing provisions include an obligation to retain the SEQ Legal credit incorporated into the template."	
+		text: "We control the copyright in this template, and you may only use" +
+		" this template in accordance with the licensing provisions in our" +
+		" terms and conditions. Those licensing provisions include an obligation" +
+		" to retain the SEQ Legal credit incorporated into the template."	
 	}),$('<dt>', {
-		text: "Web Developer"}),$("<dd>",{
-		text: "Joao Ortiz Alegre - ojoao_funkyman@hotmail.com - 669 00 01 02 - Madrid Spain"	
-	})));
+		text: "Web Developer"}),$("<dd>")));
+
 
 	$("dt").css({
 		borderBottomColor: '#9f9d9e',
@@ -169,4 +177,28 @@ $(function(){ //shorcut of $(document).ready(function(){})
 
     $("section:last").append("<script src=\"http://vjs.zencdn.net/5.4.6/video.js\"></script>");
 	
+	/*--------microdata---------*/
+	function appendMicrodata(element, tag, attribute, value) {
+        $("<" + tag + ">" + value + "</" + tag + ">").appendTo(element).attr({
+            itemprop: attribute
+        }).addClass("microdata");
+    };
+    $("footer dt:last").attr({
+        itemscope: '',
+        itemtype: 'https://schema.org/Person'
+    })
+    appendMicrodata($("footer dd:last"),"span","name"," Joao Ortiz Alegre ");
+    appendMicrodata($("footer dd:last"),"span","email"," ojoao_funkyman@hotmail.com ");
+    appendMicrodata($("footer dd:last"),"span","telephone"," 629009238 ");
+    appendMicrodata($("footer dd:last"),"span","address"," Madrid - Spain ");
+
+    $("footer dt:first").attr({
+        itemscope: '',
+        itemtype: 'https://schema.org/Person'
+    })
+    appendMicrodata($("footer dd:first"),"span","location"," Spain - Madrid ");
+    appendMicrodata($("footer dd:first"),"span","address"," Paseo de la habana 8030 ");
+    appendMicrodata($("footer dd:first"),"span","telephone"," Phone: +34 917 66 00 92 ");
+    appendMicrodata($("footer dd:first"),"span","faxNumber"," Fax: +34 917 66 00 91 ");
+            
 });
