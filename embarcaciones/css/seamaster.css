@@ -22,6 +22,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 .navlist {
 	display: inline-block;
 	width: 180px;
@@ -36,11 +37,21 @@
 	padding-top: 6%;
 	cursor: pointer;
 }
+.changecolor {
+	background-color: #1D4F73;
+}
 .seclist {
 	width: 40%;
 	float: left;
 	margin: 10px 0px 20px 0px; 
 }
+.navul {
+	height: 220px;
+}
+.secul {
+	width: 100%;
+}
+
 .miniature {
 	width: 323px;
 	height: 323px;
@@ -59,6 +70,11 @@
 	overflow: hidden;
 	padding-left: 110px;
 	padding-top: 20px;
+}
+.photofirst {
+	width: 100%;
+	position: relative;
+	top: -160px;
 }
 .flip {
     -moz-transform: scaleX(-1);
@@ -86,6 +102,12 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.ftitle {
+	width: 670px;
+}
+.fsec {
+	width: 74%;
+}
 .title {
 	color: #FFFFFF;
 	text-align: center;
@@ -102,10 +124,18 @@
     -o-transition: width .25s;
     transition: width .25s;
 }
+.text_inp_large {
+	width: 150px;
+	border-color: #1D4F73;
+}
 .price {
 	font-size: 25px;
 	color: #1D4F73;
 	padding-left: 20px;
+}
+.lengthprice {
+	color: #FFFFFF;
+	font-size: 25px;
 }
 .decoration {
 	display: inline-block;
@@ -128,4 +158,82 @@
 }
 .microdata {
 	display: block;
+}
+.definitionlistdl{
+	border-bottom-color: #9f9d9e;
+	border-bottom-style: solid;
+	height: 40px;
+	font-size: 25px;
+	cursor: pointer;
+}
+.definitionlistdd {
+	color: #1D4F73;
+	padding: 30px;
+}
+/*-------------ventana modal -------------*/
+.modalmask {
+	position: fixed;
+	font-family: Arial, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalbox{
+	width: 400px;
+	position: relative;
+	padding: 5px 20px 13px 20px;
+	background: #fff;
+	border-radius:3px;
+	-webkit-transition: all 500ms ease-in;
+	-moz-transition: all 500ms ease-in;
+	transition: all 500ms ease-in;
+}
+.resize {
+	margin: 10% auto;
+	width:0;
+	height:0;
+}
+.modalboxresize {
+	width: 800px;
+	height: 400px;
+}
+.modalmaskshow {
+	opacity: 1;
+	pointer-events: auto;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 1px;
+	text-align: center;
+	top: 1px;
+	width: 24px;
+	z-index: 99999;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius:3px;
+	font-size:16px;
+}
+.closechange { 
+	background: #FAAC58; 
+	color:#222;
+}
+.photosize {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: -10px 20px 13px 20px;
+	background: #fff;
+	
 }

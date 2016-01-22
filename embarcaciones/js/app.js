@@ -15,75 +15,81 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	$("figcaption").addClass('visible');
 	$("figure").addClass('photo_container');
 	$("video").addClass('video');
-	$("form").addClass('budget');
 	$("input").addClass('text_inp');
 
-
+	/*--------------nav list---------------------*/
 	$('.navlist').hover(function() {
-		$(this).css({
-			backgroundColor: '#1D4F73'
-		});
+		$(this).addClass('changecolor');
 	}, function() {
-		$(this).css({
-			backgroundColor: '#1C1E29'
-		});
+		$(this).removeClass('changecolor');
 	});
 	$('.navlist').on('click', function(event) {
-	
+		event.preventDefault();
 		$(this).animate({
 			borderTopWidth: "70px",
 			paddingTop: "0.5%"
 			},
 			500, function() {
-			/* stuff to do after animation is complete */
 			$(this).animate({
 			borderTopWidth: "10px",
 			paddingTop: "6%"
 			},
-			500)
+			500);
 		});
-		event.preventDefault();
 	});
-	$(".list:first").css('height', '220px');
-
-	$('.photolist :first').css({
-		width: '100%'
-	});
-
-
-	$('.curtain:first').css('width', '670px');
+	/*--------photo miniature--------*/
+	$(".list:first").addClass('navul');
+	$('.photolist :first').addClass('secul');
+	$('.curtain:first').addClass('ftitle');
+	function namePrice(selector) {
+		var name = selector.siblings('figure').children('figcaption').text(),
+			data_price = selector.parent("article").data('price'),
+			full_name = name + "<br>" + data_price + "€";
+		return full_name;	
+	}
 	$('.curtain').hover(function() {
 		$(this).animate({
 			opacity: "0.7"
 			}, 500);
-		var name = $(this).siblings('figure').children('figcaption').text(),
-			data_price = $(this).parent("article").data('price'),
-			full_name = name + "<br>" + data_price + "€";
-		$(this).html(full_name);
+		$(this).html(namePrice($(this)));
 	}, function() {
 		$(this).animate({
 			opacity: "0"
 			}, 500);
 		$(this).html("");
 	});
-	/*
+	$('.photo:eq(0)').addClass('flip photofirst');
+	$('.photo:eq(3)').addClass('flip');
+	$('.photo:eq(4)').addClass('flip');
+	$('.seclist :first').addClass('fsec');
+	
+
+	/*--------modal window click foto--------*/
+	$("body").append($("<section>").addClass('modalmask').append(
+		$("<figure>").addClass('modalbox resize').append($("<a>",{text: "X"}).attr({
+			href: '#close',
+			title: 'Close'
+		}).addClass('close'))));
 	$(".curtain").on('click', function(event) {
 		event.preventDefault();
-		$("this").parent(".miniature").css('borderColor', '#1D4F73');
+		$(".resize").addClass('modalboxresize');
+		$(".modalmask").addClass('modalmaskshow');
+		var img = $(this).siblings("figure").children('img').clone();
+		$(".modalbox").append($(img[0]).removeClass('photo').addClass('photosize'));
 	});
-*/
-
-	$('.seclist :first').css({
-		width: '74%'
+	$(".close").on('click', function(event) {
+		event.preventDefault();
+		$(".resize").removeClass('modalboxresize');
+		$(".modalmask").removeClass('modalmaskshow');
+		$(".photosize").remove();
 	});
-	$('.photo').eq(0).css({
-		width: '100%',
-		position: "relative",
-		top: "-160px"
-	}).addClass('flip');
-	$('.photo').eq(3).addClass('flip');
-	$('.photo').eq(4).addClass('flip');
+	$(".close").hover(function() {
+		$(this).addClass('closechange');
+	}, function() {
+		$(this).removeClass('closechange');
+	});
 
+	/*--------alt information--------*/
 	var total = $('.photo_container img').length;
 	$('.photo_container img').each(function(index, el) {
 		var str = $(this).siblings('figcaption').text();
@@ -91,9 +97,11 @@ $(function(){ //shorcut of $(document).ready(function(){})
 		$(this).attr('alt', str_alt);
 	});
 
+	/*--------title underline decoration--------*/
 	$(".title").after('<p class="decoration"></p>');
 	$(".title").before('<p class="decoration"></p>');
 	
+	/*--------footer list--------*/
 	$(".footerlist ul").remove();
 	$(".footerlist").append($("<dl>").append($('<dt>', {
 		text: "Who are we?"}),$("<dd>",{
@@ -117,65 +125,46 @@ $(function(){ //shorcut of $(document).ready(function(){})
 	}),$('<dt>', {
 		text: "Web Developer"}),$("<dd>")));
 
-
-	$("dt").css({
-		borderBottomColor: '#9f9d9e',
-		borderBottomStyle: 'solid',
-		height: '40px',
-		fontSize: '25px',
-		cursor: 'pointer'
-	});
-	$("dd").css({
-		color: '#1D4F73',
-		padding: '30px'
-		});
+	$("dt").addClass('definitionlistdl');
+	$("dd").addClass('definitionlistdd');
 
 	$("dd").hide();
 	$("dt").click(function(event){
-         var desplegable = $(this).next();
-         $('dd').not(desplegable).slideUp('fast');
-          desplegable.slideToggle('fast');
-          event.preventDefault();
-          })
-
-	$(".budget label:first-child").css({
-		color: '#FFFFFF',
-		fontSize: '25px'
-	});
-	$(".text_inp").addClass('shadow')
-	$(".text_inp").focus(function(event) {
-		$(this).css({
-			width: '150px',
-			borderColor: '#1D4F73'
-		});
+		var desplegable = $(this).next();
+		$('dd').not(desplegable).slideUp('fast');
+		desplegable.slideToggle('fast');
 		event.preventDefault();
+    })
+
+	/*--------form action--------*/
+	$("form label:first-child").addClass('lengthprice');
+	$(".text_inp").addClass('shadow');
+	$(".text_inp").focus(function(event) {
+		event.preventDefault();
+		$(this).addClass('text_inp_large');
 	});
 	$(".text_inp").focusout(function(event) {
-		$(this).css({
-			width: '20px',
-			borderColor: '#343C45'
-		});
 		event.preventDefault();
+		$(this).removeClass('text_inp_large');
 	});
 	$(".text_inp").on('input', function(event) {
+		event.preventDefault();
 		var text = $(this).val().trim();
 		if (!isNaN(text) && text !== '') {
-			$(".budget span").remove();
-			$(".budget").append('<span class="price">Initial Price: ' + (text*12345) + ' €</span>')
+			$("form span").remove();
+			$("form").append('<span class="price">Initial Price: ' + (text*12345) + ' €</span>')
 		}else {
-			$(".budget span").remove();
+			$("form span").remove();
 		}
-		event.preventDefault();
 	});
 
+	/*--------video---------*/
 	$("head").append("<link href=\"http://vjs.zencdn.net/5.4.6/video-js.css\" rel=\"stylesheet\">");
-
     $("video").attr({
         id: "my-video",
         preload: "auto"
     }).addClass("video-js vjs-default-skin").attr('data-setup', '{}');
-
-    $("section:last").append("<script src=\"http://vjs.zencdn.net/5.4.6/video.js\"></script>");
+    $("section:eq(1)").append("<script src=\"http://vjs.zencdn.net/5.4.6/video.js\"></script>");
 	
 	/*--------microdata---------*/
 	function appendMicrodata(element, tag, attribute, value) {
@@ -189,7 +178,7 @@ $(function(){ //shorcut of $(document).ready(function(){})
     })
     appendMicrodata($("footer dd:last"),"span","name"," Joao Ortiz Alegre ");
     appendMicrodata($("footer dd:last"),"span","email"," ojoao_funkyman@hotmail.com ");
-    appendMicrodata($("footer dd:last"),"span","telephone"," 629009238 ");
+    appendMicrodata($("footer dd:last"),"span","telephone"," +34 629 00 92 38 ");
     appendMicrodata($("footer dd:last"),"span","address"," Madrid - Spain ");
 
     $("footer dt:first").attr({
