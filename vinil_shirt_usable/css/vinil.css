@@ -1,0 +1,546 @@
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+
+}
+
+.gris {
+	background-color: #b2b1b1;
+	color: white; 
+}
+.gris-oscuro {
+	background-color: #9f9d9e;
+	color: white;
+}
+.cyan {
+	background: -webkit-linear-gradient(#1dcfd1, #16a5a7);
+	background: -moz-linear-gradient(#1dcfd1, #16a5a7);
+	background: linear-gradient(#1dcfd1, #16a5a7);
+	color: white;
+}
+.boton {
+	border-radius: 0.5em;
+	border:none;
+	height: 1.8em;
+	width: 6em;
+	/*box-shadow : laterales,abajo,expandir,color*/
+	-webkit-box-shadow: -2px 3px 10px #888888;
+	   -moz-box-shadow: -2px 3px 10px #888888;
+	        box-shadow: -2px 3px 10px #888888;
+}
+input[type='text'], input[type='search'], input[type='email'] {
+	border-radius: 0.3em;
+	height: 1.8em;
+}
+
+
+img.middle {
+	vertical-align: middle;
+}
+a.white {
+	color: white;
+	text-decoration: none;
+	font-family: tahoma;
+	font-size: 0.9em;
+}
+
+#container {
+	max-width: 960px;
+	margin: auto; 
+} 
+/*----------logo-----------*/
+#geolo  {
+	text-align: right;
+	height: 1.8em;
+	padding: 0.2em;
+	padding-right: 1em;
+}
+#logo {
+	width: 9em;
+	height: 13.2em;
+	margin-left: 3em;
+	position: absolute;
+	overflow: hidden;
+	top: 0em;
+	-webkit-box-shadow: 0px -8px 18px #888888; 
+	   -moz-box-shadow: 0px -8px 18px #888888;
+	        box-shadow: 0px -8px 18px #888888;
+}
+#logo figure img {
+	width: 8em;
+	height: 42em;
+	padding-left: 0.4em;
+	animation: logo 20s infinite;
+}
+@keyframes logo {
+	0% {transform: translate(0px,-20px);}
+	50% {transform: translate(0px,-220px);}
+	100% {transform: translate(0px,-465px);}
+}
+/*--------carrito-producto-------------*/
+#producto , #navegacion {
+	margin-left: 13em;
+	height: 5.7em;
+}
+
+#producto form {
+	float: left;
+	margin: 1em;
+	margin-top: 2em;
+	margin-left: 8em;
+}
+input[type="search"] {
+	width: 17em;
+	height: 2.4em;
+	border: 1px solid #9f9d9e;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: none;
+	color: rgba(0, 0, 0, .4);
+}
+input[type="search"] + input {
+	width: 2.6em;
+	height: 2.4em;
+	border: 1px solid #9f9d9e;
+	border-bottom-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+	border-left: none;
+	margin-left: -5px;
+	background: url(../imagenes/lupa.png);
+}
+#usuario_carrito {
+	float: right;
+	margin: 1em;
+	margin-top: 1em;
+}
+#usuario {
+	background-image: url(../imagenes/usuario.png);
+	width: 4em;
+	height: 3.5em;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#carrito {
+	background-image: url(../imagenes/carrito.png);
+	width: 4em;
+	height: 3.5em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -0.4em;
+	cursor: pointer;
+}
+#triangulo {
+	width: 0;
+	height: 0;
+	background: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	border: 10px solid #1dcfd1;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	margin-right: -0.4em;
+}
+#cuenta_carro {
+	width: 2.5em;
+	height: 2.5em;
+	border: none;
+	background: #1dcfd1;
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
+}
+/*--------navegacion---------*/
+ li.nivel1 {
+	float: left;
+	width: 8em;
+	line-height: 1.6em;
+	margin-left: 1em;
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+#navegacion a {
+	text-decoration: none;
+	display: block;
+}
+li.nivel1 > a {
+	color: #9f9d9e;
+	text-align: right;
+}
+li.nivel1 > a::after {
+	content: "";
+	background: url(../imagenes/flecha.png) no-repeat;
+	width: 1.7em;
+	height: 1.7em;
+	float: right;
+	margin-top: -0.2em;
+	margin-left: 1em;
+	transition: all .3s;
+}
+li.nivel1 > a:hover:after {
+	transform: rotate(90deg);	
+}
+ul ul {
+	min-width: 9em;
+	line-height: 1.9em;
+	position: absolute;
+}
+ul ul li {
+	max-height: 0;
+	overflow: hidden;
+	transition: all .6s;
+	background: #9f9d9e;
+	border: 1px solid white;
+	border-top: none;
+}
+li.nivel1 > a:hover + ul li {
+	max-height: 10em;
+	overflow: visible;
+}
+ul ul li:hover {
+	background: #1dcfd1;
+	overflow: visible;
+}
+ul ul a {
+	color: white;
+	text-align: center;
+}
+#navegacion {
+	float: left;
+}
+
+/*-------boletin----------*/
+#boletin {
+	height: 3.7em;
+}
+#boletin  nav {
+	float: left;
+	padding: 1em;
+}
+#boletin  nav a {
+	font-size: 1em;
+	text-decoration: none;
+	color: #636363 ;
+	margin-right: 2em;
+}
+nav figure {
+	margin-top: -0.4em;
+	width: 3em;
+	height: 2.1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+figure#correo {
+	background-image: url(../imagenes/sobre.png);
+}
+figure#telefono {
+	background-image: url(../imagenes/telefono.png);
+}
+#boletin div {
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+}
+form div label {
+	display: block;
+	font-size: 0.9em;
+	margin-top:-0.4em;
+	color: #636363;
+}
+form div input {
+	width: 17.2em;
+	border: 0.1em solid white;
+}
+/*-----------banner camiseta---------------*/
+#bannerCamiseta {
+	background-image: url(../imagenes/banner_camiseta.png);
+	height: 27em;
+}
+header h5 {
+	font-size: 3.4em;
+	color: white;
+	text-align: right;
+	padding-right: 1em;
+	-webkit-text-shadow: -4px 5px 7px #000000; 
+       -moz-text-shadow: -4px 5px 7px #000000;
+            text-shadow: -4px 5px 7px #000000;
+}
+.botongrande {
+	float: right;
+	margin-top: 12.5em;
+	margin-right: 6em;
+	width: 15em;
+	height: 2.3em;
+	font-size: 1.4em;
+	
+}
+/*--------banner diseños mas buscados-------*/
+header h2 {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold; 
+	color:#1dcfd1;
+}
+h2 span {
+	font-size: 0.5em;
+	color: #9f9d9e;
+}
+header h2::after {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	width: 5.8em;
+	height: 0.04em;
+	background: #9f9d9e;
+	margin-left: 0.5em;	
+}
+header h2::before {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	width: 5.8em;
+	height: 0.04em;
+	background: #9f9d9e;
+	margin-right:0.5em;	
+}
+#masbuscados ul li {
+	position: relative;
+	width: 14.3em;
+	height: 14.3em;
+	display: inline-block;
+	border: 1px solid ;
+	margin:0.2em; 
+	margin-top: 0.5em;	
+}
+li#musica {
+	background-image: url(../imagenes/yofoup11.png);
+}
+li#deportes {
+	background-image: url(../imagenes/surf.png);
+}
+li#freak {
+	background-image: url(../imagenes/freak.jpg);
+}
+li#video {
+	background-image: url(../imagenes/space.png);
+}
+li#humor {
+	background-image: url(../imagenes/pussy.png);
+}
+li#series {
+	background-image: url(../imagenes/darma.jpg);
+}
+li#retro {
+	background-image: url(../imagenes/retro.png);
+}
+li#peliculas {
+	background-image: url(../imagenes/starwars.png);
+}
+#masbuscados ul li a {
+	background-color: #1dcfd1;
+	position: absolute;
+	display: block;
+	width: 10em;
+	height: 1.8em;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	top: 11.5em;
+	left: 2em;
+	-webkit-box-shadow: -4px 4px 8px -1px #888888;
+	   -moz-box-shadow: -4px 4px 8px -1px #888888;
+	        box-shadow: -4px 4px 8px -1px #888888;
+}
+/*------banner envio-------*/
+#bannerEnvio {
+	margin-top: 0.5em;
+	background-image: url(../imagenes/banner_envio.png);
+	height: 22.5em;
+}
+#bannerEnvio h1 {
+	font-size: 4em;
+	color: #1dcfd1;
+	text-align: right;
+	margin-right: 1.7em;
+}
+
+#bannerEnvio article p {
+	font-size: 1.6em;
+	text-align: right;
+	color: #9f9d9e;
+	margin-right: 4.3em;
+	white-space: pre;
+}
+#botonenvio {
+	margin-top: 1.2em;
+	width: 10em;
+}
+p span {
+	text-transform: uppercase;
+}
+.dos {
+	color: #1dcfd1;
+	font-size: 1.5em
+}
+/*----------banner satisfaccion------------*/
+#satisfaccion article {
+	display: inline-block;
+	width:20em;
+	margin: 0.4em -0.2em;
+}
+#satisfaccion figure {
+	float: left;
+	width: 5em;
+	height: 5em;
+	margin-left: 1em;
+
+}
+#satisfaccion h5 {
+	font-size: 1.5em;
+}
+#satisfaccion h5:hover {
+	color: #1dcfd1;
+}
+#satisfaccion p {
+	color: lightgray;
+}
+#satisfaccion a {
+	text-decoration: none;
+	color:white;
+}
+figure#satis {
+		background-image: url(../imagenes/satis1.png);
+}
+figure#ambiente {
+		background-image: url(../imagenes/satis2.png);
+}
+figure#seguridad {
+		background-image: url(../imagenes/satis3.png);
+		width:4em;
+}
+/*------------pie---------------*/
+* #pie {
+	background-image: url(../imagenes/fondo_pie.png);
+}
+#pie section article {
+	display: inline-block;
+	width: 15.3em;
+	margin: 1.5em 2.2em;
+	vertical-align: top;		
+}
+.tituo_pie {
+	font-size: 1.5em;
+}
+#pie section article p {
+	color: #636363;
+	text-align: left;
+}
+figure#mapa {
+	background-image: url(../imagenes/mapa.png);
+	width: 14em;
+	height: 14em;
+}
+#pie a {
+	color: #636363;
+	text-decoration: none;	
+}
+#pie ul li {
+	margin-bottom: 0.4em;
+}
+section div {
+	display: inline-block;
+	margin: 0.5em 2.1em;
+	vertical-align: middle;
+}
+figure#paypal {
+	background-image: url(../imagenes/paypal.png);
+	width: 12em;
+	height: 5em;
+}
+/*-----------------spray redes sociales-------------------*/
+figure.redes {
+	width: 2.6em;
+	height: 2.7em;
+	display: inline-block;
+	margin: 0em;
+	cursor: pointer;
+}
+
+#face {
+	background-image: url(../imagenes/redes.png);
+	background-position: -11px -11px ;
+}
+#twiter {
+	background-image: url(../imagenes/redes.png);
+	background-position: -55px -11px ;
+}
+#google {
+	background-image: url(../imagenes/redes.png);
+	background-position: -95px -11px ;
+}
+#linkedin {
+	background-image: url(../imagenes/redes.png);
+	background-position: -140px -11px ;
+}
+#insta {
+	background-image: url(../imagenes/redes.png);
+	background-position: -185px -11px ;
+}
+#rss {
+	background-image: url(../imagenes/redes.png);
+	background-position: -230px -11px ;
+}
+#youtube {
+	background-image: url(../imagenes/redes.png);
+	background-position: -275px -11px ;
+}
+#face:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#twiter:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#google:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#linkedin:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#insta:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#rss:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#youtube:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+figure#confianza {
+	background-image: url(../imagenes/selloanimado.gif);
+	background-repeat: no-repeat;
+	width: 4.3em;
+	height: 4.3em;
+}
+.confianza {
+	width: 12em;
+}
+#licencia {
+	height: 1em;
+	margin-top: -1.7em;
+}
+#licencia span, #licencia a {
+	text-align: center;
+	font-size: 1em;
+}
+#confianza + a {
+	float: right;
+	position: relative;
+	top: -3em;
+}
+
+
+
+

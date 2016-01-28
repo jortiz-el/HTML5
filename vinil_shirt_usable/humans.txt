@@ -1,0 +1,28 @@
+# humanstxt.org/
+
+
+# The humans responsible & technology colophon
+
+Joao ortiz alegre 
+
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+
+Daw 2015 - Alcobendas
+
+
+# THANKS
+
+    <name>
+
+especial thanks to the teacher 
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
+
+HTML5 , CSS3 y JavaScript
