@@ -167,6 +167,13 @@ input[type="search"] + input {
 	text-decoration: none;
 	display: block;
 }
+#navegacion {
+	background-color: yellow;
+	margin-left: 0px;
+	display: inline-block;
+	padding-top: 10px;
+
+}
 li.nivel1 > a {
 	color: #9f9d9e;
 	text-align: right;
@@ -209,9 +216,7 @@ ul ul a {
 	color: white;
 	text-align: center;
 }
-#navegacion {
-	float: left;
-}
+
 
 /*-------boletin----------*/
 #boletin {
@@ -541,6 +546,14 @@ figure#confianza {
 	top: -3em;
 }
 
-
-
-
+/*-------------boostrap-----------------*/
+.container {
+	max-width: 960px;
+}
+.navbar-brand {
+	padding: 0px;
+	min-width: 80px;
+}
+.navbar-brand figure img {
+	width: 100%;
+}
