@@ -3,28 +3,58 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Plantilla básica de Bootstrap</title>
- 
-    <!-- CSS de Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
- 
-    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vinil_shirt.css">
   </head>
   <body>
-    <h1>¡Hola mundo!</h1>
- 
-    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <header class="gris">
+      <div class="container">
+        <section  class="row">
+          <div id="logo" class="col-md-2 cyan">
+            <figure class="">
+            <img src="imagenes/logo2.png" alt="logo">
+          </figure>
+          </div>
+          <div class="col-md-10">
+            <section id="search" >
+              <section id="usuario_carrito" class="row">
+                  <figure id="usuario" class="col-md-4"></figure>
+                  <figure id="carrito" class="col-md-4"></figure>
+                  <figure id="triangulo" class="col-md-4"></figure>
+                  <input type="text" class="cyan" id="cuenta_carro" value="0" readonly="readonly"/>
+              </section>
+                <div id="searchdiv"  class="col-lg-8 col-md-6  pull-right">
+                  <form class="navbar-form" role="search">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                      <div class="input-group-btn">
+                        <button class="btn btn-primary cyan" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </section>
+          <h1>nihao yao</h1>
+          </div>
+        </section>
+      </div>
+    </header>
+    
+
+
+
+
+
+
     <script src="http://code.jquery.com/jquery.js"></script>
- 
-    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
-         incluir archivos JavaScript individuales de los únicos
-         plugins que utilices) -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>
 
