@@ -1,6 +1,7 @@
 .gris {
 	background-color: #b2b1b1;
-	color: white; 
+	color: white;
+	border: none;
 }
 .gris-oscuro {
 	background-color: #9f9d9e;
@@ -20,6 +21,10 @@
 	-webkit-box-shadow: 0px -8px 18px #888888; 
 	   -moz-box-shadow: 0px -8px 18px #888888;
 	        box-shadow: 0px -8px 18px #888888;
+}
+#logo figure {
+	margin:auto;
+	text-align: center;
 }
 #logo figure img {
 	height: 42em;
@@ -93,4 +98,21 @@ h1 {
 	color: white;
 	font-size: 1.5em;
 	text-align: center;
+}
+/*--------navegacion-------------*/
+#navegacion {
+	margin-bottom: 0px;
+	border:none;
+}
+#navbar-1 {
+	margin: 0px;
+	padding: 15px;
+	
+}
+#navbar-1 a {
+	color:white;
+	font-size: 20px;
+}
+.dropdown-menu li a:hover{
+	color:#b2b1b1;
 }
