@@ -1,3 +1,5 @@
+
+
 .gris {
 	background-color: #b2b1b1;
 	color: white;
@@ -26,10 +28,14 @@
 	margin:auto;
 	text-align: center;
 }
-#logo figure img {
+#logolg {
 	height: 42em;
 	padding-left: 0.8em;
 	animation: logo 20s infinite;
+}
+#logoxs {
+	
+	display: none;
 }
 @keyframes logo {
 	0% {transform: translate(0px, 20px);}
@@ -41,10 +47,23 @@
 	overflow: hidden;
 	height: 1%;
 }
+#searchdiv {
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.navbar-form {
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
 
 .input-group {
-	width: 80%;
+	width: 100%;
 	margin: 20px 0px 20px 0px;
+	padding: 0px;
 }
 
 h1 {
@@ -72,7 +91,7 @@ h1 {
 	background-image: url(../imagenes/carrito.png);
 	width: 5em;
 	height: 4.3em;
-	margin-right: -35px;
+	margin-right: 0px;
 	display: inline-block;
 	vertical-align: middle;
 	cursor: pointer;
@@ -115,4 +134,44 @@ h1 {
 }
 .dropdown-menu li a:hover{
 	color:#b2b1b1;
+}
+
+/*-------------Media querys--------------*/
+
+@media (min-width: 768px) {
+	#srch-term {
+		min-width: 180px;
+	}
+}
+@media (max-width: 414px) {
+	#usuario_carrito input[type='text'], #carrito, #triangulo {
+		display: none;
+	}
+	#searchdiv {
+		max-width: 60%;
+
+	}
+	.navbar-form {
+		max-width: 60%;
+	}
+	.input-group {
+	width: 170px;
+	}
+	#logolg {
+	display: none;
+	}
+	#logoxs {
+		background: url(../imagenes/logoxs.png) no-repeat;
+		width: 200px;
+		display: block;
+		height: 199px;
+		border: none;
+		margin: auto;
+	}
+	#logo {
+	height: 80px;
+	
+	}
+
+	
 }
