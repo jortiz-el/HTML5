@@ -147,6 +147,7 @@ h1 {
 /*-----------banner camiseta---------------*/
 #bannerCamiseta {
 	background-image: url(../imagenes/banner_camiseta.png);
+	background-size: 100%;
 	height: 27em;
 
 }
@@ -298,6 +299,7 @@ header h2::before {
 #bannerEnvio {
 	margin-top: 0.5em;
 	background-image: url(../imagenes/banner_envio.png) ;
+	background-size: 100%;
 	height: 22.5em;
 }
 #bannerEnvio h2 {
@@ -325,6 +327,28 @@ p span {
 	color: #1dcfd1;
 	font-size: 1.5em
 }
+/*------------pie---------------*/
+.back {
+	background-image: url(../imagenes/fondo_pie.png) ;
+	background-size: 100%;
+}
+article {
+	text-align: center;
+	vertical-align: middle;
+}
+#mapa {
+	background-image: url(../imagenes/mapa.png);
+	width: 16em;
+	height: 16em;
+	margin: 20px auto;
+}
+#paypal {
+	background-image: url(../imagenes/paypal.png);
+	width: 14em;
+	height: 6em;
+	margin: 20px auto;
+}
+
 
 /*-------------Media querys--------------*/
 
@@ -341,6 +365,7 @@ p span {
 	header h2::before {
 		width: 4em;
 	}
+	
 	
 	
 	
@@ -412,11 +437,17 @@ p span {
 	#bannerCamiseta, #bannerEnvio{
 		display: none;
 	}
+	.back {
+		background-image: none ;
+	}
 
 }
 @media  (min-width: 480px) {
 	#bannerCamiseta, #bannerEnvio{
 		display: none;
+	}
+	.back {
+		background-image: none ;
 	}
 	.text_img {
 	  top:220px;
@@ -433,6 +464,11 @@ p span {
 	.textprice {
 	  top:140px;
 	}
+	#bannerCamiseta, #bannerEnvio {
+		display: block;
+	}
+}
+@media (min-width: 991px) {
 	#bannerCamiseta, #bannerEnvio {
 		display: block;
 	}
