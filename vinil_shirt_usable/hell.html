@@ -1,0 +1,233 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Camisetas Estampadas Vinilo">
+	<meta name="keywords" content="html5,css3,webdesing">
+	<meta name="author" content="Joao Ortiz">
+	<title>Vinil Shirt - Termoimpresion camisetas</title>
+	<link rel="icon" href="imagenes/icono.png" type="image/png" sizes="16x16">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/css-reset.css">
+	<link rel="stylesheet" href="css/vinil.css">
+	<link rel="stylesheet/less" type="text/css" href="less/vinil.less" />
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" defer></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+	<script src="js/eventos.js"></script>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<section class="gris" id="geolo" ></section>
+			<section id="logo" class="cyan">
+				<figure class="cyan" >
+					<img src="imagenes/logo2.png" alt="logo">
+				</figure>
+			</section>
+			
+			<section id="producto">
+				<nav  id="navegacion">
+					<ul>
+						<li class="nivel1"><a href="#">Diseños</a>
+							<ul>
+								<li><a href="#">Música</a></li>
+								<li><a href="#">Deportes</a></li>
+								<li><a href="#">Freak</a></li>
+								<li><a href="#">Video Juegos</a></li>
+								<li><a href="#">Humor</a></li>
+								<li><a href="#">Series</a></li>
+								<li><a href="#">Retro</a></li>
+								<li><a href="#">Peliculas</a></li>
+							</ul> 
+						</li>
+						<li class="nivel1"><a href="#">Productos</a>
+							<ul>
+								<li><a href="#">Camiseta</a></li>
+								<li><a href="#">Camiseta chica</a></li>
+								<li><a href="#">Camiseta corta</a></li>
+								<li><a href="#">musculosa</a></li>
+								<li><a href="#">Gorra plana</a></li>
+								<li><a href="#">Gorra trucker</a></li>
+								<li><a href="#">sudaderas</a></li>
+								<li><a href="#">Tazas</a></li>
+							</ul> 
+						</li>
+						<li class="nivel1"><a href="#">Contacto</a></li>
+					</ul>
+				</nav>
+				<section id="usuario_carrito">
+					<figure id="usuario"></figure>
+					<figure id="carrito"></figure>
+					<figure id="triangulo"></figure>
+					<input type="text" class="cyan" id="cuenta_carro" value="0" readonly="readonly"/>
+				</section>
+			</section>
+			<section>
+				<div class="col-sm-3 col-md-3 pull-right">
+			        <form class="navbar-form" role="search">
+			        <div class="input-group">
+		            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+		            <div class="input-group-btn">
+	                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+		            </div>
+			        </div>
+			        </form>
+		        </div>
+			</section>
+			
+			<section class="gris clear" id="boletin" >
+				
+			</section>
+		</header>
+		
+		<section>
+			<section id="bannerCamiseta">
+			<header>
+				<h5>Prueba tus propios diseños</h5>
+			</header>
+			<form action="#">
+				<input type="submit" class="cyan boton botongrande" value="Sube tu archivo ahora">
+			</form>
+			</section>
+			<section>
+				<header>
+					<h2>Diseños<span> mas buscados</span></h2>
+				</header>	
+					<article id="masbuscados">
+						
+						<ul>
+							<li id="musica">
+								<a href="#">Música</a>
+							</li>
+							<li id="deportes">
+								<a href="#">Deportes</a>
+							</li>
+							<li id="freak">
+								<a href="#">Freak</a>
+							</li>
+							<li id="video">
+								<a href="#">Video Juegos</a>
+							</li>
+							<li id="humor">
+								<a href="#">Humor</a>
+							</li>
+							<li id="series">
+								<a href="#">Series</a>
+							</li>
+							<li id="retro">
+								<a href="#">Retro</a>
+							</li>
+							<li id="peliculas">
+								<a href="#">Peliculas</a>
+							</li>
+						</ul>
+					
+					</article>
+			</section>
+			<section id ="bannerEnvio">
+				<h1>Envios Gratis</h1>
+				<br>
+				<article>
+					<p>El envío de realizará por correo
+					totalmente <span>gratis*</span> </p>
+					<p><br>a partir de <span class="dos">2</span> unidades!!</p>
+				</article>
+				<form action="#" method="post">
+					<input type="submit" id="botonenvio" class="cyan boton botongrande" value="Metodos de Envio">
+				</form>
+			</section>
+		</section>
+		<footer>
+			<section id="satisfaccion" class="gris-oscuro">
+				<article>
+					<a href="#">
+					<figure id="satis"></figure>
+					<h5>satisfacción 100%</h5>
+					<p>calidad asegurada!<br>
+					   devoluciones sin problemas
+					</p>
+					</a>
+				</article>
+				<article>
+					<a href="#">
+					<figure id="ambiente"></figure>
+					<h5>Medio ambiente</h5>
+					<p>reciclamos cajas<br>
+					   cuidamos el medio hambiente
+					</p>
+					</a>
+				</article>
+				<article>
+					<a href="#">
+					<figure id="seguridad"></figure>
+					<h5>Seguridad online</h5>
+					<p>compra con seguridad<br>
+					   confianza online asegurada
+					</p>
+					</a>
+				</article>
+			</section>
+			<section id="pie" class="gris">
+				<section>
+					<article>
+						<h2 class="tituo_pie">quizas te interese</h2>
+						<ul>
+							<li><a href="#">+ Quienes somos?</a></li>
+							<li><a href="#">+ Producción de vinilo</a></li>
+							<li><a href="#">+ Como lavar la ropa</a></li>
+							<li><a href="#">+ Precios gran tirada</a></li>
+							<li><a href="#">+ Devoluciones</a></li>
+							<li><a href="#">+ Aviso legal</a></li>
+							<li><a href="#">+ Privacidad</a></li>
+						</ul>
+					</article>
+					<article>
+						<figure id="mapa"></figure>
+					</article>
+					<article>
+						<h2 class="tituo_pie">Sobre Vinil Shirt</h2>
+						<p>
+							¿Te apasionan las camisetas? 
+							Crea, Compra y vende camisetas y 
+							muchos mas productos de calidad 
+							con lo que te gusta de verdad.
+							Con vinil hirt, alimenta tu pasión.
+						</p><br>
+						<p>
+							Producido y enviado desde Madrid
+							Mas de 100.000 clientes ya nos
+							han dado su confianza.
+						</p>
+					</article>
+				</section>
+				<section>
+					<div>
+						<figure id="paypal"></figure>
+					</div>	
+					<div>
+						<figure class="redes" id="face"></figure>
+						<figure class="redes" id="twiter"></figure>
+						<figure class="redes" id="google"></figure>
+						<figure class="redes" id="linkedin"></figure>
+						<figure class="redes" id="insta"></figure>
+						<figure class="redes" id="rss"></figure>
+						<figure class="redes" id="youtube"></figure>
+					</div>
+					<div class="confianza">
+						<figure id="confianza"></figure>
+						<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+					</div>
+					
+				</section>
+				<div id="licencia">
+						<span property="dct:title" rel="dct:type">Vinil Shirt by</span><span property="cc:attributionName">Joao Ortiz Alegre is licensed under a </span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>
+				</div>
+			</section>
+		</footer>
+	</div>	
+</body>
+</html>
