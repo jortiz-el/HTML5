@@ -132,7 +132,7 @@ h1 {
 }
 #navbar-1 a {
 	color:white;
-	font-size: 20px;
+	font-size: 1.5em;
 }
 .dropdown-menu li a:hover{
 	color:#b2b1b1;
@@ -144,9 +144,10 @@ h1 {
 	height: 27em;
 
 }
-header h5 {
+.header h1 {
 	font-size: 3.4em;
 	color: white;
+	background-color: transparent;
 	text-align: right;
 	padding-right: 1em;
 	-webkit-text-shadow: -4px 5px 7px #000000; 
@@ -168,7 +169,7 @@ header h5 {
 	color: red;
 	text-decoration: line-through;
 }
-header h2 {
+.header h2 {
 	text-align: center;
 	font-size: 3em;
 	font-weight: bold; 
@@ -178,7 +179,7 @@ h2 span {
 	font-size: 0.5em;
 	color: #9f9d9e;
 }
-header h2::after {
+.header h2::after {
 	display: inline-block;
 	vertical-align: middle;
 	content: "";
@@ -187,7 +188,7 @@ header h2::after {
 	background: #9f9d9e;
 	margin-left: 0.5em;	
 }
-header h2::before {
+.header h2::before {
 	display: inline-block;
 	vertical-align: middle;
 	content: "";
