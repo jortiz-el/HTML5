@@ -1,0 +1,562 @@
+
+
+.gris {
+	background-color: #b2b1b1;
+	color: white;
+	border: none;
+}
+.gris-oscuro {
+	background-color: #9f9d9e;
+	color: white;
+}
+.cyan {
+	background: -webkit-linear-gradient(#1dcfd1, #16a5a7);
+	background: -moz-linear-gradient(#1dcfd1, #16a5a7);
+	background: linear-gradient(#1dcfd1, #16a5a7);
+	color: white;
+}
+.boton {
+	border-radius: 0.5em;
+	border:none;
+	height: 1.8em;
+	width: 6em;
+	/*box-shadow : laterales,abajo,expandir,color*/
+	-webkit-box-shadow: -2px 3px 10px #888888;
+	   -moz-box-shadow: -2px 3px 10px #888888;
+	        box-shadow: -2px 3px 10px #888888;
+}
+.padcero {
+	padding: 0px;
+}
+
+/*--------logo-------------*/
+#logo {
+	max-height: 220px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px -8px 18px #888888; 
+	   -moz-box-shadow: 0px -8px 18px #888888;
+	        box-shadow: 0px -8px 18px #888888;
+}
+#logo figure {
+	margin:auto;
+	text-align: center;
+}
+#logolg {
+	height: 42em;
+	padding-left: 0.8em;
+	animation: logo 20s infinite;
+}
+#logoxs {
+	display: none;
+}
+@keyframes logo {
+	0% {transform: translate(0px, 20px);}
+	50% {transform: translate(0px,-200px);}
+	100% {transform: translate(0px,-385px);}
+}
+/*--------search bar-------------*/
+#search {
+	overflow: hidden;
+	height: 1%;
+}
+
+.input-group {
+	width: 100%;
+	margin: 20px 0px 20px 0px;
+	padding: 0px;
+}
+
+h1 {
+	background-color: blue;
+}
+
+/*--------carrito-producto-------------*/
+
+#usuario_carrito {
+	float: right;
+	margin: 1em;
+	margin-top: 1em;
+	margin-left: 0px;
+}
+#searchdiv {
+	margin: 0px;
+}
+#usuario {
+	background-image: url(../imagenes/usuario.png);
+	width: 5em;
+	height: 4.3em;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#carrito {
+	background-image: url(../imagenes/carrito.png);
+	width: 5em;
+	height: 4.3em;
+	margin-right: 0px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#triangulo {
+	width: 0;
+	height: 0;
+	background: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	border: 13px solid #1dcfd1;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	margin-right: -0.4em;
+}
+#cuenta_carro {
+	width: 2.6em;
+	height: 2.6em;
+	border-radius: 4px;
+	border: none;
+	background: #1dcfd1;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+}
+/*--------navegacion-------------*/
+#navegacion {
+	margin-bottom: 0px;
+	border:none;
+}
+#navbar-1 {
+	margin: 0px;
+	padding: 15px;
+	
+}
+#navbar-1 a {
+	color:white;
+	font-size: 1.5em;
+}
+.dropdown-menu li a:hover{
+	color:#b2b1b1;
+}
+/*-----------banner camiseta---------------*/
+#bannerCamiseta {
+	background-image: url(../imagenes/banner_camiseta.png);
+	background-size: 100%;
+	height: 27em;
+
+}
+.header h1 {
+	font-size: 3.4em;
+	color: white;
+	background-color: transparent;
+	text-align: right;
+	padding-right: 1em;
+	-webkit-text-shadow: -4px 5px 7px #000000; 
+       -moz-text-shadow: -4px 5px 7px #000000;
+            text-shadow: -4px 5px 7px #000000;
+}
+.botongrande {
+	float: right;
+	margin-top: 12.5em;
+	margin-right: 6em;
+	width: 15em;
+	height: 2.3em;
+	font-size: 1.4em;
+	
+}
+/*--------banner diseños mas buscados-------*/
+
+.descuento {
+	color: red;
+	text-decoration: line-through;
+}
+.header h2 {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold; 
+	color:#1dcfd1;
+}
+h2 span {
+	font-size: 0.5em;
+	color: #9f9d9e;
+}
+.header h2::after {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	width: 5em;
+	height: 0.04em;
+	background: #9f9d9e;
+	margin-left: 0.5em;	
+}
+.header h2::before {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	width: 5.8em;
+	height: 0.04em;
+	background: #9f9d9e;
+	margin-right:0.5em;	
+}
+.container_img {
+	max-width: 150px;
+	max-height: 150px;
+	margin-top: 40px;
+	
+}
+.div-img {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin:20px 20px 10px 20px;
+}
+.img {
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+	width: 100%;
+    transform:translate(0px,40px) scale(1.4);
+    -ms-transform:translate(0px,40px) scale(1.4); // IE 9 
+    -moz-transform:translate(0px,40px) scale(1.4); // Firefox 
+    -webkit-transform:translate(0px,40px) scale(1.4); // Safari and Chrome 
+    -o-transform:translate(0px,40px) scale(1.4); // Opera 
+    -webkit-transition: all 500ms ease-in-out; // IE 9
+    -moz-transition: all 500ms ease-in-out; // Firefox
+    -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+    -o-transition: all 500ms ease-in-out; // Opera   
+}
+.text_img {
+  z-index: -1;
+  position: absolute;
+  top:220px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+.textprice {
+  top:180px;
+  color: green;
+  font-size: 18px;
+}
+.div-img:hover .img {
+  transform: translate(0px, -100px) ;
+  -ms-transform: translate(0px, -100px) ;
+  -moz-transform: translate(0px, -100px) ;
+  -webkit-transform: translate(0px, -100px) ;
+  -o-transform: translate(0px, -100px) ;
+}
+
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#05EFF7 0%, #087F8F 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #087F8F;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #087F8F;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #087F8F;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #087F8F;
+}
+/*------banner envio-------*/
+#bannerEnvio {
+	margin-top: 0.5em;
+	background-image: url(../imagenes/banner_envio.png) ;
+	background-size: 100%;
+	height: 22.5em;
+}
+#bannerEnvio h2 {
+	font-size: 4em;
+	color: #1dcfd1;
+	text-align: right;
+	margin-right: 1.7em;
+}
+
+#bannerEnvio article p {
+	font-size: 1.6em;
+	text-align: right;
+	color: #9f9d9e;
+	margin-right: 4.3em;
+	white-space: pre;
+}
+#botonenvio {
+	margin-top: .4em;
+	width: 10em;
+}
+p span {
+	text-transform: uppercase;
+}
+.dos {
+	color: #1dcfd1;
+	font-size: 1.5em
+}
+/*------------pie---------------*/
+.back {
+	background-image: url(../imagenes/fondo_pie.png) ;
+	background-size: 100%;
+}
+article {
+	text-align: center;
+	vertical-align: middle;
+}
+#mapa {
+	background-image: url(../imagenes/mapa.png);
+	width: 16em;
+	height: 16em;
+	margin: 20px auto;
+}
+#paypal {
+	background-image: url(../imagenes/paypal.png);
+	width: 14em;
+	height: 6em;
+	margin: 20px auto;
+}
+.tittle_menu {
+	color:white;
+}
+/*-----------------spray redes sociales-------------------*/
+figure.redes {
+	width: 2.6em;
+	height: 2.7em;
+	display: inline-block;
+	cursor: pointer;
+	margin: auto;
+}
+.redes_container {
+	margin:auto;
+	max-width: 290px;
+	vertical-align: middle;
+}
+#interes {
+	min-width: 200px;
+	font-size: 16px;
+}
+
+#face {
+	background-image: url(../imagenes/redes.png);
+	background-position: -11px -11px ;
+}
+#twiter {
+	background-image: url(../imagenes/redes.png);
+	background-position: -55px -11px ;
+}
+#google {
+	background-image: url(../imagenes/redes.png);
+	background-position: -95px -11px ;
+}
+#linkedin {
+	background-image: url(../imagenes/redes.png);
+	background-position: -140px -11px ;
+}
+#insta {
+	background-image: url(../imagenes/redes.png);
+	background-position: -185px -11px ;
+}
+#rss {
+	background-image: url(../imagenes/redes.png);
+	background-position: -230px -11px ;
+}
+#youtube {
+	background-image: url(../imagenes/redes.png);
+	background-position: -275px -11px ;
+}
+#face:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#twiter:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#google:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#linkedin:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#insta:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#rss:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+#youtube:hover {
+	background-image: url(../imagenes/redes2.png);
+}
+
+/*-------------Media querys--------------*/
+
+
+@media (min-width: 768px) {
+	
+	#srch-term {
+		min-width: 180px;
+	}
+	
+	header h2::after {
+		width: 4em;
+	}
+	header h2::before {
+		width: 4em;
+	}
+	#usuario_carrito {
+		margin-left: 0px;
+	}
+	.navbar-form {
+		margin: 0px;
+		padding: 0px;
+	}
+	#text_search {
+		max-width: 40%;
+	}
+
+
+}
+@media (max-width: 768px) {
+	#logo {
+	max-height: 180px;
+	}
+	.text_img {
+	  top:240px;
+	}
+	.textprice {
+	  top:210px;
+	}
+
+	header h2::after {
+		width: 0em;
+	}
+	header h2::before {
+		width: 0em;
+	}
+	#select_search {
+		display: none;
+	}
+	#text_search {
+		max-width: 60%;
+	}
+	
+}
+@media  (max-width: 480px) {
+	#usuario_carrito input[type='text'], #carrito, #triangulo {
+		display: none;
+	}
+	#searchdiv {
+		max-width: 60%;
+
+	}
+	.navbar-form {
+		max-width: 60%;
+	}
+	.input-group {
+	width: 170px;
+	}
+	#logolg {
+	display: none;
+	}
+	#logoxs {
+		background: url(../imagenes/logoxs.png) no-repeat;
+		width: 200px;
+		display: block;
+		height: 199px;
+		border: none;
+		margin: auto;
+	}
+	#logo {
+	height: 80px;
+	
+	}
+	
+	header h2::after {
+		width: 0em;
+	}
+	header h2::before {
+		width: 0em;
+	}
+	#wanted {
+		display: none;
+	}
+	.text_img {
+	  top:120px;
+	}
+	.textprice {
+	  top:100px;
+	}
+	#bannerCamiseta, #bannerEnvio{
+		display: none;
+	}
+	.back {
+		background-image: none ;
+	}
+	.out_margin {
+		margin: auto 40px;
+	}
+	#text_search {
+		max-width: 60%;
+	}
+
+
+}
+@media  (min-width: 480px) {
+	#bannerCamiseta, #bannerEnvio{
+		display: none;
+	}
+	.back {
+		background-image: none ;
+	}
+	.text_img {
+	  top:220px;
+	}
+	.textprice {
+	  top:190px;
+	}
+}
+
+@media (min-width: 1200px) {
+  	.text_img {
+	  top:190px;
+	}
+	.textprice {
+	  top:140px;
+	}
+	#bannerCamiseta, #bannerEnvio {
+		display: block;
+	}
+	#bannerCamiseta {
+	background-image: url(../imagenes/banner_tu_camiseta2.jpg);
+	}
+}
+@media (min-width: 991px) {
+	#bannerCamiseta, #bannerEnvio {
+		display: block;
+	}
+}
