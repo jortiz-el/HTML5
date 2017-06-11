@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nuevos inputs HTML5</title>
+        <style type="text/css">
+			.titulo{
+				font-size: 2em;
+			}
+			hr {
+				border: 0;
+				height: 2px;
+				border-top: 1px dashed black;
+				border-bottom: 1px dashed black;
+				}
+        </style>
+    </head>
+    <body>
+    	<ul>
+    		<li class="titulo"><p>Datalist input HTML5</p></li>
+    	<p>según el usuario va escribiendo, el navegador abre una lista desplegable con las diferentes opciones a seleccionar. Es muy parecido a un combo o lista</p>	
+		<label for="">Escribe un color: </label>
+    	<input list="listacolores">
+		<datalist id="listacolores">
+		  <option value="Azul">
+		  <option value="Rojo">
+		  <option value="Amarillo">
+		  <option value="Negro">
+		  <option value="Blanco">
+		</datalist>
+		<hr>
+			<li class="titulo"><p>keygen HTML5</p></li>
+    	<p>Al enviarse el formulario se crean 2 claves, una pública que se envía al servidor y que posteriormente se usará para seguir auntentificándonos en el sistema, y otra privada que se almacena localmente en el navegador</p>	
+		<form action="/" method="post">
+		    <label for="">User: </label> <input type="text" name="usuario">
+		    <!-- añadimos el campo de typo keygen -->
+		   <label for=""> Pass: </label><keygen name="clave">
+		    <input type="submit" value="Enviar">
+		</form>
+		<hr>
+			<li class="titulo"><p>output HTML5</p></li>
+    	<p>representa el resultado de un cálculo entre los diferentes input de un formulario</p>	
+		<form method="POST" oninput="resultado.value=parseInt(valor1.value)+parseInt(valor2.value)">
+		    <input type="number" id="valor1" value="0"> +
+		    <input type="number" id="valor2" value="0"> =
+		    <output name="resultado" for="valor1 valor2"></output>
+		</form>
+		<hr>
+			<li class="titulo"><p>number input HTML5</p></li>
+			<p>Este input valida automáticamente que los valores introducidos sean numéricos, con el consiguiente ahorro de código en la recepción o validación de los formularios.</p>
+		<form name="ejemplo1" action="/" method="POST">
+		    Introduce tu edad: <input type="number" name="edad">
+		    <input type="submit" value="Enviar">
+		</form>
+		<hr>
+			<li class="titulo"><p>range input HTML5</p></li>
+			<p>Este input es muy parecido al HTML5 number input, la diferentecia radica en que en este caso la única manera de especificar el valor es mediante su slider con sus correspondientes límites.</p>
+			<input type="range" name="edad" min="18" max="99" step="1" value="30">
+			<hr>
+			<li class="titulo"><p>tel input HTML5</p></li>
+			<p>El dispositivo móvil detecta que el input es de tipo ‘tel’ y al pulsar en él automáticamente sale el teclado telefónico del movil para insertar el número en cuestión.</p>
+		<form name="ejemplo1" action="/" method="POST">
+		    Introduce tu TELEFONO: <input type="tel" name="telefono">
+		    <input type="submit" value="Enviar">
+		</form>
+		<hr>
+			<li class="titulo"><p>email input HTML5</p></li>
+			<p>El elemento por defecto detecta que el campo debe ser rellenado con contenido válido de una cuenta de email, por lo que mostrará una @ en el teclado y hara las verificaciones pertinentes para cumplir los requisitos de una dirección de email.</p>
+		<form name="ejemplo1" action="/" method="POST">
+			    Introduce tu email: <input type="email" name="email">
+			    <input type="submit" value="Enviar">
+		</form>
+		<hr>
+			<li class="titulo"><p>color input HTML5</p></li>
+			<p>Representa una paleta (selector) de colores sin necesidad de añadir plugins ni códigos adicionales como veníamos haciendo hasta ahora. Así con un solo click podemos elegir facílmente un color.</p>
+		<label for="color">Selecciona un color: </label><input name="color" type="color" value="#f3f3f3"/>
+		<hr>
+			<li class="titulo"><p>search input HTML5</p></li>
+			<p>Con este input podremos decir en la validación del formulario que el campo contendrá valores de búsqueda, así el propio input nos porporciona un dato válido y el teclado del dispositivo móvil mostrará el botón ‘buscar’.</p>
+		<form name="ejemplo" action="/" method="POST">
+			Introduce el término de búsqueda: <input type="search" name="busqueda"><br>
+			<input type="submit" value="Enviar">
+		</form>
+		<hr>
+			<li class="titulo"><p>url input HTML5</p></li>
+			<p>Se parece bastante a el input tel de HTML5. Este campo cuando se visualiza en dispositivos móviles facilita en el teclado las teclas ‘.’, ‘/’, y ‘.com’.</p>
+			<input type="url" name="direccionweb" />
+		<hr>
+			<li class="titulo"><p>date input HTML5</p></li>
+			<p>Este elemento vale para representar en nuestra web un datepicker o calendario, el formato de la fecha devuelto es ‘AAAA-MM-DD’.</p>
+			<input type="date" name="fecha">
+		<hr>
+			<li class="titulo"><p>datetime input HTML5</p></li>
+			<p>nput similar al anterior solo que este último además de la fecha envía también la hora. El formato de fecha y hora devuelto es el siguiente: ‘AAAA-MM-DDTHH:MMZ’.</p>
+			<input type="datetime" name="fecha">
+		<hr>
+			<li class="titulo"><p>datetime-local input HTML5</p></li>
+			<p>Más de lo mismo, elemento idéntico al datetime pero sin enviar la zona horaria. El formato devuelto es: ‘AAAA-MM-DDTHH:MM’.</p>
+<input type="datetime-local" name="fechayhora">		
+		</ul>
+    </body>
+</html>
